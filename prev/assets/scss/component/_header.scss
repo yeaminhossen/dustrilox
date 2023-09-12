@@ -1,0 +1,101 @@
+
+@use '../abstract' as *;
+
+/*----------------------------------------*/
+/*  02. HEADER CSS START
+/*----------------------------------------*/
+
+.header{
+	&__padding{
+		padding-left: 245px;
+		padding-right: 245px;
+		@media #{$xxl}{
+			padding-left: 45px;
+			padding-right: 45px;
+		}
+		@media #{$xl}{
+			padding-left: 20px;
+			padding-right: 20px;
+		}
+		@media #{$lg}{
+			padding-left: 15px;
+			padding-right: 15px;
+		}
+		@media #{$md}{
+			padding-left: 15px;
+			padding-right: 15px;
+		}
+		@media #{$sm}{
+			padding-left: 15px;
+			padding-right: 15px;
+			padding-top: 15px;
+			padding-bottom: 15px;
+		}
+		@media #{$xs}{
+			padding-left: 0px;
+			padding-right: 0px;
+			padding-top: 15px;
+			padding-bottom: 15px;
+		}
+	}
+	&__transparent{
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		width: 100%;
+		background: $white;
+		@include box-shadow(0px 20px 30px 0px rgba(1, 11, 60, 0.06));
+		z-index: 99;
+	}
+	&__area{
+		&.sticky{
+			left: 0;
+            margin: auto;
+            position: fixed !important;
+            top: 0;
+            width: 100%;
+            box-shadow: 0 0 60px 0 rgba(0, 0, 0, 0.07);
+            z-index: 99;
+            -webkit-animation: 300ms ease-in-out 0s normal none 1 running fadeInDown;
+            animation: 300ms ease-in-out 0s normal none 1 running fadeInDown;
+            -webkit-box-shadow: 0 10px 15px rgba(25, 25, 25, 0.1);
+            background: $white;
+		}
+	}
+	&__btn{
+		& .e-btn{
+			padding-top: 12px;
+			padding-bottom: 12px;
+		}
+	}
+}
+
+.main-menu{
+	& ul{
+		& li{
+			display: inline-block;
+			&:not(:last-child){
+				margin-right: 35px;
+			}
+			& a{
+				font-size: 14px;
+				font-weight: 500;
+				color: $black;
+				display: inline-block;
+				padding: 25px 0;
+				padding-bottom: 22px;
+				text-transform: uppercase;
+			}
+			&:hover{
+				& > a{
+					color: $t-blue;
+				}
+			}
+		}
+	}
+}
+
+.logo img{
+	width: 117px;
+}

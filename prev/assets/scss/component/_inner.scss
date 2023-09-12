@@ -1,0 +1,76 @@
+@use '../abstract' as *;
+/*----------------------------------------*/
+/*  03. INNER CSS START
+/*----------------------------------------*/
+
+.inner{
+    &__slider{
+        &-item{
+            margin-bottom: 50px;
+            & img{
+                @include border-radius(6px);
+                @include box-shadow(0px 30px 50px 0px rgba(1, 11, 60, 0.08));
+                margin-bottom: 20px;
+            }
+            & h4{
+                font-size: 18px;
+                font-weight: 600;
+                & a{
+                    &:hover{
+                        color: $t-blue;
+                    }
+                }
+            }
+        }
+        & .owl-nav{
+            position: absolute;
+            bottom: -55px;
+            left: 50%;
+            @include transform(translateX(-50%));
+            @include flexbox();
+            & button{
+                display: inline-block;
+                width: 50px;
+                height: 50px;
+                line-height: 50px;
+                text-align: center;
+                font-size: 18px;
+                color: $black;
+                border: 2px solid $border-5;
+                @include border-radius(50%);
+                margin: 0 5px;
+                &:hover{
+                    color: $white;
+                    background: $t-blue;
+                    border-color: $t-blue;
+                }
+            }
+        }
+    }
+    &__shape{
+        &-1{
+            position: absolute;
+            top: -170px;
+            left: 125px;
+        }
+        &-2{
+            position: absolute;
+            top: -150px;
+            left: 260px;
+        }
+        &-3{
+            position: absolute;
+            bottom: 55px;
+            right: 150px;
+            -webkit-animation: hero-circle-1 6s linear 0s infinite alternate;
+            -moz-animation: hero-circle-1 6s linear 0s infinite alternate; 
+            -o-animation: hero-circle-1 6s linear 0s infinite alternate;
+            animation: hero-circle-1 6s linear 0s infinite alternate; 
+        }
+        &-4{
+            position: absolute;
+            bottom: -150px;
+            right: 170px;
+        }
+    }
+}

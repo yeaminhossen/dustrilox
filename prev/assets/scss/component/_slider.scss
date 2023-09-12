@@ -1,0 +1,174 @@
+@use '../abstract' as *;
+
+/*----------------------------------------*/
+/*  02. SLIDER CSS START
+/*----------------------------------------*/
+.slider-area_2 {
+    height: 960px;
+    display: flex;
+    align-items: center;
+    z-index: 1;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center top;
+    width: 100%;
+  }
+  .slider__overlay-2::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-image: -moz-linear-gradient(90deg, #343a40 0%, rgba(0, 0, 0, 0) 100%);
+    background-image: -webkit-linear-gradient(90deg, #343a40 0%, rgba(0, 0, 0, 0) 100%);
+    background-image: -ms-linear-gradient(90deg, #343a40 0%, rgba(0, 0, 0, 0) 100%);
+    z-index: -1;
+  }
+  .slider__overlay-2::before {
+    background-image: -moz-linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, #343a40 100%);
+    background-image: -webkit-linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, #343a40 100%); 
+    background-image: -ms-linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, #343a40 100%);
+    width: 100%;
+    height: 100%;
+    content: "";
+    top: 0;
+    position: absolute;
+    z-index: -1;
+  }
+
+  @media only screen and (min-width: 992px) and (max-width: 1200px) {
+    .slider-area_2 {
+      height: 850px;
+    }
+  }
+  @media only screen and (min-width: 768px) and (max-width: 991px), only screen and (min-width: 576px) and (max-width: 767px) {
+    .slider-area_2 {
+      height: 600px;
+    }
+  }
+  @media (max-width: 575px) {
+    .slider-area_2 {
+      height: 650px;
+    }
+  }
+  .flider-2 {
+    margin-top: 150px;
+  }
+  @media only screen and (min-width: 768px) and (max-width: 991px) {
+    .flider-2 {
+      margin-bottom: 125px;
+    }
+  }
+  @media only screen and (min-width: 768px) and (max-width: 991px) {
+    .flider-2 {
+      margin-bottom: 50px;
+    }
+  }
+  @media (max-width: 575px), only screen and (min-width: 576px) and (max-width: 767px) {
+    .flider-2 {
+      margin-bottom: 125px;
+      margin-top: 200px;
+    }
+  }
+  .flider-2 span {
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    display: block;
+    letter-spacing: 2px;
+    font-family: "Poppins", sans-serif;
+    text-transform: uppercase;
+  }
+  .flider-2 span i {
+    margin-right: 10px;
+  }
+  .flider-2 h2 {
+    font-size: 60px;
+    color: #ffffff;
+    font-weight: 600;
+    margin-bottom: 30px;
+  }
+  @media only screen and (min-width: 992px) and (max-width: 1200px) {
+    .flider-2 h2 {
+      font-size: 55px;
+    }
+  }
+  @media only screen and (min-width: 768px) and (max-width: 991px) {
+    .flider-2 h2 {
+      font-size: 45px;
+    }
+  }
+  @media only screen and (min-width: 576px) and (max-width: 767px), (max-width: 575px) {
+    .flider-2 h2 {
+      font-size: 30px;
+    }
+  }
+  @media (max-width: 575px) {
+    .flider-2 h2 br {
+      display: none;
+    }
+  }
+  .flider-2__btn {
+    display: flex;
+  }
+  @media only screen and (min-width: 576px) and (max-width: 767px), (max-width: 575px) {
+    .flider-2__btn {
+      display: inline-block;
+    }
+  }
+.flider-2 p{ 
+  font-size: 18px;
+  color: #fff;
+  padding-right: 398px;
+  line-height: 28px;
+}
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+  .flider-2 p{ 
+    padding-right: 200px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .flider-2 p{ 
+    padding-right: 100px;
+  }
+}
+@media only screen and (min-width: 575px) and (max-width: 767px) {
+  .flider-2 p{ 
+    padding-right: 35px;
+  }
+}
+@media only screen and (min-width: 0px) and (max-width: 574px) {
+  .flider-2 p{ 
+    padding-right: 0;
+  }
+}
+
+  @keyframes hero-circle-1 {
+    0% {
+      -webkit-transform: rotate(0deg);
+      -moz-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(360deg);
+      -moz-transform: rotate(360deg);
+      -ms-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+  @keyframes hero-circle-2 {
+    0% {
+      -webkit-transform: translateY(-100px);
+      -moz-transform: translateY(-100px);
+      -ms-transform: translateY(-100px);
+      transform: translateY(-100px);
+    }
+    100% {
+      -webkit-transform: translateY(50px);
+      -moz-transform: translateY(50px);
+      -ms-transform: translateY(50px);
+      transform: translateY(50px);
+    }
+  }

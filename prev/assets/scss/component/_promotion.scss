@@ -1,0 +1,241 @@
+@use '../abstract' as *;
+/*----------------------------------------*/
+/*  03. PROMOTION CSS START
+/*----------------------------------------*/
+
+.promotion{
+    &__item{
+        &:hover{
+            & .promotion__icon span{
+                -webkit-transform: translate3d(0,-10px,0);
+                -moz-transform: translate3d(0,-10px,0);
+                -ms-transform: translate3d(0,-10px,0);
+                -o-transform: translate3d(0,-10px,0);
+                transform: translate3d(0,-10px,0);
+            }
+        }
+    }
+    &__icon{
+        & span{
+            display: inline-block;
+            width: 80px;
+            height: 80px;
+            line-height: 80px;
+            text-align: center;
+            background: $white;
+            @include border-radius(50%);
+            @include box-shadow(0px 20px 40px 0px rgba(1, 11, 60, 0.08));
+            backface-visibility: hidden;
+            -webkit-transform: translate3d(0,0,0);
+            -moz-transform: translate3d(0,0,0);
+            -ms-transform: translate3d(0,0,0);
+            -o-transform: translate3d(0,0,0);
+            transform: translate3d(0,0,0);
+            -webkit-transition: transform .3s cubic-bezier(.21,.6,.44,2.18);
+            -moz-transition: transform .3s cubic-bezier(.21,.6,.44,2.18);
+            -ms-transition: transform .3s cubic-bezier(.21,.6,.44,2.18);
+            -o-transition: transform .3s cubic-bezier(.21,.6,.44,2.18);
+            transition: transform .3s cubic-bezier(.21,.6,.44,2.18);
+            & img{
+                width: 35px;
+                height: 35px;
+            }
+        }
+    }
+    &__features{
+        &-item{
+            @media #{$lg}{
+                margin-right: 20px;
+            }
+        }
+        &-icon{
+            margin-right: 10px;
+            & span{
+                display: inline-block;
+                width: 50px;
+                height: 50px;
+                line-height: 46px;
+                border: 2px solid $border-4;
+                text-align: center;
+                @include border-radius(50%);
+                & svg{
+                    width: 20px;
+                    height: 20px;
+                    & .st0{
+                        fill:none;
+                        stroke:$t-blue;
+                        stroke-width:1.5;
+                        stroke-linecap:round;
+                        stroke-linejoin:round;
+                    }
+                }
+            }
+            &.why__icon{
+                & span{
+                    & svg{
+                        width: 25px;
+                        height: 25px;
+                    }
+                }
+            }
+        }
+        &-content{
+            & h3{
+                font-size: 16px;
+                margin-bottom: 0;
+            }
+        }
+        & ul{
+            & li{
+                @media #{$xs}{
+                    margin-bottom: 20px;
+                }
+            }
+        }
+    }
+    &__thumb{
+        @media #{$md, $sm, $xs}{
+            margin-top: 30px;
+        }
+        & .promotion-img{
+            @include box-shadow(0px 50px 100px 0px rgba(15, 3, 49, 0.12));
+            @include border-radius(6px);
+            &-border{
+                border: 8px solid $white;
+            }
+        }
+    }
+    &__content{
+        @media #{$md, $sm, $xs}{
+            padding-left: 0;
+        }
+        @media #{$xs}{
+            padding-right: 0;
+        }
+    }
+    &__list{
+        &-content{
+            @media #{$xs}{
+                padding-right: 0;
+            }
+            & ul{
+                & li{
+                    font-size: 16px;
+                    color: $black;
+                    &:not(:last-child){
+                        margin-bottom: 10px;
+                    }
+                    & i{
+                        display: inline-block;
+                        width: 20px;
+                        height: 20px;
+                        line-height: 20px;
+                        text-align: center;
+                        @include border-radius(50%);
+                        background: rgba($color: $t-green, $alpha: .06);
+                        color: $t-green;
+                        font-size: 10px;
+                        margin-right: 10px;
+                    }
+                    &:hover{
+                        & i{
+                            background: $t-green;
+                            color: $white;
+                        }
+                    }
+                }
+            }
+        }
+        &-thumb{
+            & .promotion-img-2{
+                margin-left: -125px;
+                @media #{$sm, $xs}{
+                    width: 100%;
+                    margin-left: 0;
+                }
+            }
+        }
+    }
+    &__shape{
+        &-img{
+            position: absolute;
+            z-index: -1;
+        }
+        &-1{
+            right: -10%;
+            top: -19%;
+            @media #{$xl}{
+                right: -5%;
+            }
+            @media #{$lg, $md, $sm, $xs}{
+                right: 0%;
+            }
+        }
+        &-2{
+            right: -12%;
+            bottom: -10%;
+            @media #{$xl}{
+                right: -5%;
+            }
+            @media #{$lg, $md, $sm, $xs}{
+                right: -5%;
+            }
+        }
+        &-3{
+            left: 10%;
+            bottom: -6%;
+        }
+        &-4{
+            left: -100px;
+            top: -100px;
+        }
+        &-5{
+            left: 10%;
+            bottom: 30%;
+            -webkit-animation: hero-circle-2 6s linear 0s infinite alternate;
+            -moz-animation: hero-circle-2 6s linear 0s infinite alternate; 
+            -o-animation: hero-circle-2 6s linear 0s infinite alternate;
+            animation: hero-circle-2 6s linear 0s infinite alternate;
+        }
+        &-6{
+            top: 10%;
+            left: 0;
+            -webkit-animation: hero-circle-1 6s linear 0s infinite alternate;
+            -moz-animation: hero-circle-1 6s linear 0s infinite alternate; 
+            -o-animation: hero-circle-1 6s linear 0s infinite alternate;
+            animation: hero-circle-1 6s linear 0s infinite alternate;
+        }
+        &-7{
+            top: 0;
+            left: 24%;
+            @media #{$xs}{
+                width: 180px;
+                height: 180px;
+            }
+        }
+        &-8{
+            top: 10%;
+            right: 0;
+            -webkit-animation: hero-circle-1 6s linear 0s infinite alternate;
+            -moz-animation: hero-circle-1 6s linear 0s infinite alternate; 
+            -o-animation: hero-circle-1 6s linear 0s infinite alternate;
+            animation: hero-circle-1 6s linear 0s infinite alternate;
+        }
+        &-9{
+            bottom: 24%;
+            right: 20%;
+            -webkit-animation: hero-circle-1 6s linear 0s infinite alternate;
+            -moz-animation: hero-circle-1 6s linear 0s infinite alternate; 
+            -o-animation: hero-circle-1 6s linear 0s infinite alternate;
+            animation: hero-circle-1 6s linear 0s infinite alternate;
+        }
+        &-10{
+            bottom: 26%;
+            right: 44%;
+            -webkit-animation: hero-circle-2 6s linear 0s infinite alternate;
+            -moz-animation: hero-circle-2 6s linear 0s infinite alternate; 
+            -o-animation: hero-circle-2 6s linear 0s infinite alternate;
+            animation: hero-circle-2 6s linear 0s infinite alternate;
+        }
+    }
+}

@@ -1,0 +1,136 @@
+@use '../abstract' as *;
+/*----------------------------------------*/
+/*  03. WHY CSS START
+/*----------------------------------------*/
+
+.why{
+    &__item{
+        border: 1px solid $border-3;
+        @include border-radius(6px);
+        padding: 35px 60px;
+        position: relative;
+        height: 100%;
+        @media #{$xl}{
+            padding-right: 40px;
+            padding-right: 40px;
+        }
+        @media #{$lg}{
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+        @media #{$md}{
+            padding-left: 35px;
+            padding-right: 35px;
+        }
+        @media #{$xs}{
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+        &::after{
+            position: absolute;
+            content: '';
+            top: -3px;
+            left: auto;
+            right: 0;
+            width: 0;
+            height: 10%;
+            background: $t-blue;
+            @include border-radius(6px);
+            z-index: -1;
+        }
+        &:hover{
+            box-shadow: 0px -3px 0px 0px rgba(43, 78, 255, 0.004),0px 30px 50px 0px rgba(1, 11, 60, 0.08);
+            border-color: $white;
+            &::after{
+                width: 100%;
+                left: 0;
+                right: auto;
+            }
+            & .why__icon{
+                & span,
+                & i{
+                    border-color: $t-blue;
+                }
+            }
+        }
+    }
+    &__icon{
+        & span,
+        & i{
+            display: inline-block;
+            width: 70px;
+            height: 70px;
+            text-align: center;
+            line-height: 80px;
+            border: 2px solid $border;
+            @include border-radius(50%);
+            font-size: 35px;
+            color: $t-blue;
+            
+        }
+    }
+    &__svg{
+        &-1{
+            & svg{
+                width: 30px;
+                height: 30px;
+                & .st0,
+                & .st1{
+                    fill:none;
+                    stroke:$t-blue;
+                    stroke-width:18;
+                    stroke-linecap:round;
+                    stroke-linejoin:round;
+                    stroke-miterlimit:10;
+                }
+            }
+        }
+        &-2{
+            & svg{
+                width: 40px;
+                height: 40px;
+                & .st0{
+                    fill:$t-blue;
+                }
+            }
+        }
+        &-3{
+            & svg{
+                width: 35px;
+                height: 35px;
+                & .st0{
+                    fill:$t-blue;
+                }
+            }
+        }
+        &-4{
+            & svg{
+                width: 35px;
+                height: 27px;
+                & .st0{
+                    fill:$t-blue;
+                    stroke:$white;
+                    stroke-width:6;
+                    stroke-miterlimit:10;
+                }
+            }
+        }
+        &-str0{
+            & svg{
+                & .st0,
+                & .st1{
+                    stroke-width: 1;
+                }
+            }
+        }
+    }
+    &__title{
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+    &__content{
+        & p{
+            margin-bottom: 0;
+        }
+    }
+}

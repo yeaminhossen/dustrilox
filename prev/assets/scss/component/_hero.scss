@@ -1,0 +1,168 @@
+@use '../abstract' as *;
+/*----------------------------------------*/
+/*  00. HERO CSS START
+/*----------------------------------------*/
+
+.hero{
+    &__thumb{
+        position: absolute;
+        &-wrapper{
+            margin-top: -50px;
+            @media #{$xxl}{
+                margin-left: 0;
+            }
+            @media #{$xl}{
+                margin-left: 40px;
+            }
+            @media #{$lg}{
+                margin-left: 40px;
+            }
+            @media #{$md}{
+                margin-left: 55px;
+            }
+            @media #{$xs}{
+                display: none;
+            }
+        }
+        & img{
+            @include box-shadow(0px 40px 70px 0px rgba(8, 0, 42, 0.14));
+        }
+        &.two{
+            left: 400px;
+            top: -65px;
+            @media #{$xl}{
+                left: 250px; 
+            }
+            @media #{$lg}{
+                left: 150px;
+                top: -120px;
+            }
+            @media #{$md}{
+                left: 400px;
+                top: -400px;
+            }
+        }
+        &.three{
+            left: 400px;
+            top: 310px;
+            @media #{$xl}{
+                left: 250px;
+            }
+            @media #{$lg}{
+                left: -55px;
+                top: 360px;
+            }
+            @media #{$md}{
+                left: 380px;
+                top: -130px;
+            }
+        }
+    }
+    &__height{
+        min-height: 1120px;
+
+        @media #{$sm}{
+            min-height: 770px;
+        }
+        @media #{$xs}{
+            min-height: 670px;
+        }
+    }
+    &__title{
+        font-size: 65px;
+        position: relative;
+        z-index: 1;
+        margin-bottom: 40px;
+
+        @media #{$lg}{
+            font-size: 45px;
+        }
+        @media #{$sm}{
+            font-size: 48px;
+        }
+        @media #{$xs}{
+            font-size: 35px;
+        }
+
+        & .line{
+            position: relative;
+            z-index: 1;
+            &::after{
+                content: "";
+                position: absolute;
+                left: 0;
+                bottom: 3px;
+                width: 0%;
+                height: 7px;
+                background: #FCAF17;
+                z-index: -1;
+                animation: hero-line 3s linear 0s infinite alternate;
+            }
+            &::before{
+                content: "";
+                position: absolute;
+                bottom: 3px;
+                width: 100%;
+                height: 7px;
+                background: #0054FF;
+                z-index: -2;
+                
+            }
+        }
+    }
+    &__overlay{
+        &::after{
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 50%;
+            height: 100%;
+            background: #F7F7F7;
+            z-index: -1;
+        }
+    }
+    &__shape{
+        position: absolute;
+
+        &-1{
+            top: 15%;
+            left: 5%;
+            width: 70px;
+        }
+        &-2{
+            left: 5%;
+            bottom: 20%;
+
+            @media #{$sm, $xs}{
+                left: 60%;
+                bottom: 25%;
+            }
+        }
+        &-3{
+            right: 45%;
+            top: 12%;
+            width: 90px;
+
+            @media #{$xs}{
+                right: 11%;
+                top: 17%;
+            }
+        }
+    }
+    &__content{
+        & .ah-words-wrapper{
+            display: block;
+        }
+    }
+}
+
+@keyframes hero-line {
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 100%;
+
+    }
+}

@@ -1,0 +1,32 @@
+@use '../abstract' as *;
+/*----------------------------------------*/
+/*  03. HOME CSS START
+/*----------------------------------------*/
+
+.home{
+    &__demo{}
+    &__item{
+        &:hover{
+            & .home__thumb{
+                @include box-shadow(0px 20px 50px 0px rgba(2, 14, 50, 0.08));
+                & img{
+                    @include transform(scale(1.1));
+                }
+            }
+        }
+    }
+    &__conetnt{}
+    &__title{
+        font-size: 20px;
+        font-weight: 500;
+        & a{
+            &:hover{
+                color: $t-blue;
+            }
+        }
+    }
+    &__thumb{
+        @include border-radius(6px);
+        @include box-shadow(0px 30px 50px 0px rgba(1, 11, 60, 0.08));
+    }
+}

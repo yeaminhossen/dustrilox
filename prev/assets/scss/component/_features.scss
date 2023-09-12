@@ -1,0 +1,327 @@
+@use '../abstract' as *;
+/*----------------------------------------*/
+/*  03. FEATURES CSS START
+/*----------------------------------------*/
+
+.features{
+    &__title{
+        font-size: 22px;
+        margin-bottom: 20px;
+    }
+    &__content{
+        & p{
+            margin-bottom: 0;
+        }
+    }
+    &__item{
+        
+        padding: 55px 45px 50px 50px;
+        box-shadow: 0px 30px 60px 0px rgba(8, 0, 42, 0.1);
+        backface-visibility: hidden;
+        -webkit-transform: translate3d(0, 0, 0);
+        -moz-transform: translate3d(0, 0, 0);
+        -ms-transform: translate3d(0, 0, 0);
+        -o-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+        -webkit-transition: transform 0.3s cubic-bezier(0.21, 0.6, 0.44, 2.18);
+        -moz-transition: transform 0.3s cubic-bezier(0.21, 0.6, 0.44, 2.18);
+        -ms-transition: transform 0.3s cubic-bezier(0.21, 0.6, 0.44, 2.18);
+        -o-transition: transform 0.3s cubic-bezier(0.21, 0.6, 0.44, 2.18);
+        transition: transform 0.3s cubic-bezier(0.21, 0.6, 0.44, 2.18);
+
+
+        @media #{$lg, $xs}{
+            padding-left: 25px;
+            padding-right: 25px;
+        }
+
+        &:hover{
+            -webkit-transform: translateY(-10px) translate3d(0, -10px, 0);
+            -moz-transform: translateY(-10px) translate3d(0, -10px, 0);
+            -ms-transform: translateY(-10px) translate3d(0, -10px, 0);
+            transform: translateY(-10px) translate3d(0, -10px, 0);
+        }
+    }
+    &__thumb{
+        & .fea-img-build-wrapper{
+            width: 300px;
+            height: 200px;
+            overflow: hidden;
+            display: block;
+            border: 4px solid $white;
+            @include box-shadow(0px 20px 20px 0px rgba(86, 54, 0, 0.1));
+            @include border-radius(10px);
+
+            @media #{$xs}{
+                width: 270px;
+            }
+        }
+        & .fea-img-install-wrapper{
+            border: 5px solid $white;
+            @include border-radius(10px);
+            @include box-shadow(0px 40px 40px 0px rgba(0, 71, 115, 0.1));
+            @include transform(rotate(-20deg) translateY(-20px));
+            width: 222px;
+            height: 185px;
+            overflow: hidden;
+            width: 221px;
+            height: 176px;
+            display: inline-block;
+            
+        }
+        & .fea-img-preview-wrapper{
+            position: absolute;
+            top: 19px;
+            left: 1px;
+            width: 210px;
+            height: 175px;
+            overflow: hidden;
+        }
+        & img{
+            &.fea-img-build{
+                
+            }
+            &.fea-img-install{
+                
+            }
+            &.fea-img-preview{
+                
+            }
+        }
+        &-build{
+            width: 350px;
+        }
+        &-builder{
+            margin-top: -80px;
+            text-align: right;
+            & img{
+                @include box-shadow(0px 20px 20px 0px rgba(86, 54, 0, 0.1));
+            }
+        }
+        &-install{
+            position: relative;
+            padding-top: 35px;
+            text-align: center;
+            width: 270px;
+            & .fea-hand-icon{
+                position: absolute;
+                top: 25px;
+                left: -30px;
+                display: inline-block;
+                width: 70px;
+                height: 70px;
+                line-height: 70px;
+                text-align: center;
+                @include border-radius(50%);
+                background: $t-brown;
+                animation: hand-pulse 1.5s infinite linear;
+
+            }
+        }
+        &-preview{
+            position: relative;
+            width: 290px;
+            @media #{$xs}{
+                width: 250px;
+                margin-left: -50px;
+
+            }
+            & img{
+                &.fea-img-preview-placeholder{
+                    @include box-shadow(0px 40px 40px 0px rgba(0, 71, 115, 0.1));
+                }
+            }
+        }
+    }
+    &__shape{
+        &-1{
+            position: absolute;
+            top: 68%;
+            left: 54%;
+            @include transform(translate(-50%, -50%));
+            z-index: -1;
+            @media #{$xs}{
+                left: 50%;
+            }
+        }
+        &-2{
+            position: absolute;
+            top: 65%;
+            left: 50%;
+            @include transform(translate(-50%, -50%));
+            z-index: -1;
+            @media #{$xs}{
+                left: 50%;
+            }
+        }
+        &-3{
+            position: absolute;
+            top: 65%;
+            left: 32%;
+            @include transform(translate(-50%, -50%));
+            z-index: -1;
+            @media #{$xs}{
+                left: 50%;
+            }
+        }
+    }
+    &__icon{
+        margin-bottom: 15px;
+        & svg{
+            width: 65px;
+            height: 65px;
+        }
+    }
+}
+
+// theme features
+
+.theme{
+    &__features{
+        &-border-right{
+            border-right: 1px solid $border-2;
+        }
+        &-border-bottom{
+            border-bottom: 1px solid $border-2;
+        }
+        &-item{
+            padding: 50px;
+            padding-bottom: 40px;
+            @media #{$lg}{
+                border: none;
+                border-right: 1px solid $border-2;
+                border-bottom: 1px solid $border-2;
+            }
+            @media #{$md,$sm}{
+                border: none;
+                border-right: 1px solid $border-2;
+                border-bottom: 1px solid $border-2;
+            }
+            &:hover{
+                @include border-radius(6px);
+                border-color: $white;
+                background: $white;
+                @include box-shadow(0px 20px 30px 0px rgba(1, 11, 60, 0.08));
+
+                & .theme__features-icon span{
+                    border-color: $border;
+                    @include box-shadow(none);
+                }
+            }
+        }
+        &-icon{
+            & span{
+                display: inline-block;
+                width: 90px;
+                height: 90px;
+                line-height: 90px;
+                text-align: center;
+                background: $white;
+                border: 2px solid transparent;
+                overflow: hidden;
+                @include border-radius(6px);
+                @include box-shadow(0px 30px 40px 0px rgba(1, 11, 60, 0.06));
+            }
+        }
+        &-content{
+            & h3{
+                font-size: 20px;
+                font-weight: 500;
+                margin-bottom: 2px;
+            }
+            & span{
+                font-size: 15px;
+                color: $t-blue;
+                font-weight: 500;
+            }
+        }
+    }
+}
+
+//bakix-featusres
+.bakix-features {
+	border-radius: 5px;
+	-webkit-box-shadow: 0 2px 40px rgba(0,0,0,.08);
+	box-shadow: 0 2px 40px rgba(0,0,0,.08);
+	padding: 45px 15px;
+	text-align: center;
+}
+.bakix-features img {
+	border-radius: 5px;
+	margin-bottom: 15px;
+	width: 70px;
+}
+.bakix-features h4 {
+	font-size: 19px;
+	font-weight: 700;
+	margin: 0;
+	text-transform: capitalize;
+}
+//cta
+.cta{
+    &__padding{
+        padding: 165px 0;
+        @media #{$sm}{
+            padding: 120px 0;
+        }
+        @media #{$xs}{
+            padding: 110px 0;
+        }
+    }
+    &__title{
+        color: $white;
+        font-size: 60px;
+        margin-bottom: 0;
+
+        @media #{$lg}{
+            font-size: 50px;
+        }
+        @media #{$md}{
+            font-size: 53px;
+        }
+        @media #{$sm}{
+            font-size: 42px;
+        }
+        @media #{$xs}{
+            font-size: 28px;
+            line-height: 1.5;
+        }
+    }
+    &__overlay{
+        position: relative;
+
+        &::after{
+            position: absolute;
+            content: '';
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(23, 18, 46, 0.5);
+            mix-blend-mode: multiply;
+        }
+    }
+}
+
+@-webkit-keyframes hand-pulse {
+    0% {
+        -webkit-box-shadow: 0 0 0 0 rgba(255,255,255,255.4);
+    }
+    70% {
+        -webkit-box-shadow: 0 0 0 80px rgba(255,255,255,0);
+    }
+    100% {
+        -webkit-box-shadow: 0 0 0 0 rgba(255,255,255,0);
+    }
+  }
+  @keyframes hand-pulse {
+    0% {
+        -webkit-box-shadow: 0 0 0 0 rgba(255,255,255, 0.4);
+      }
+      70% {
+          -webkit-box-shadow: 0 0 0 80px rgba(255,255,255, 0);
+      }
+      100% {
+          -webkit-box-shadow: 0 0 0 0 rgba(255,255,255, 0);
+      }
+  }
